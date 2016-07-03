@@ -42,11 +42,15 @@ video {
 }
 
 button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
     background: none;
+    opacity: 0.9;
     border: 0;
     color: inherit;
     font: inherit;
-    font-size: 1.8em;
+    font-size: 5em;
     line-height: normal;
     overflow: visible;
     cursor: pointer;
@@ -59,8 +63,9 @@ button:focus {
     outline: none;
 }
 
-.hidden {
-    display: none;
+.fa {
+    color: #fff;
+    opacity: 0.9;
 }
 
 .banner {
@@ -72,21 +77,4 @@ button:focus {
     padding-bottom: 0.3em;
     right: 0;
     left: 0;
-}
-
-.footer {
-    bottom: 0;
-    padding: 1em;
-}
-
-@media screen and (max-device-width: 800px) {
-
-    html {
-        background: url('images/IMG_1205.jpg') no-repeat center center fixed;
-    }
-
-    video {
-        display: none;
-    }
-
 }

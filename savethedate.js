@@ -1,19 +1,17 @@
 $(document).ready(function () {
 
-    var playButton = $('[data-action="play"]'),
-        pauseButton = $('[data-action="pause"]'),
+    var videoButton = $('[data-action="toggle-video"]'),
+        icon = videoButton.find('i'),
         videoElement = $('[data-ui="video"]')[0];
 
-    playButton.on('click', function () {
-        videoElement.play();
-        playButton.addClass('hidden');
-        pauseButton.removeClass('hidden');
-    });
-
-    pauseButton.on('click', function () {
-        videoElement.pause();
-        playButton.removeClass('hidden');
-        pauseButton.addClass('hidden');
+    videoButton.on('click', function () {
+        if (videoElement.paused) {
+            videoElement.play();
+        } else {
+            videoElement.pause();
+        }
+        icon.toggleClass('fa-pause');
+        icon.toggleClass('fa-play');
     });
 
 });
