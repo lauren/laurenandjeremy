@@ -4,6 +4,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    margin: 0em;
     font-family: "adelle", serif;
     font-weight: 300;
 }
@@ -12,18 +13,10 @@ h1, h2 {
     font-size: 3.5em;
 }
 
-h1 {
-    line-height: 0.2em;
-}
-
-h2 {
-    line-height: 0.8em;
-}
-
 h3 {
     font-family: "source-sans-pro", sans-serif;
     font-size: 2.7em;
-    line-height: 0.7em;
+    margin-bottom: 1em;
 }
 
 video {
@@ -73,8 +66,7 @@ button:focus {
     opacity: .9;
     text-align: center;
     position: fixed;
-    padding-top: 2em;
-    padding-bottom: 0.3em;
+    padding: 2em;
     right: 0;
     left: 0;
 }
