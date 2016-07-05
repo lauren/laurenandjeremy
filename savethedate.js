@@ -1,10 +1,23 @@
 $(document).ready(function () {
 
-    var SPACE_KEY_CODE = 32;
+    var CONSTANTS = {
+        SPACE_KEY_CODE: 32,
+        PHRASES: [
+            "convenience = MAX_INT",
+            "romance = MAX_INT",
+            "bargains = MAX_INT",
+            "logistics = MAX_INT",
+            "that's so convenient",
+            "the most wedding",
+            "it makes total sense",
+            "it makes no sense"
+        ]
+    };
 
     var videoButton = $('[data-action="toggle-video"]'),
         icon = videoButton.find('i'),
-        videoElement = $('[data-ui="video"]')[0];
+        videoElement = $('[data-ui="video"]')[0],
+        footerElement = $('[data-ui="footer-text"');
 
     var toggleVideoStatus = function () {
         if (videoElement.paused) {
@@ -21,9 +34,14 @@ $(document).ready(function () {
     });
 
     $(window).on('keypress', function (event) {
-        if (event.charCode === SPACE_KEY_CODE) {
+        if (event.charCode === CONSTANTS.SPACE_KEY_CODE) {
             toggleVideoStatus();
         }
     });
+
+    window.setInterval(function () {
+        var phrasesIndex = Math.floor(Math.random() * CONSTANTS.PHRASES.length);
+        footerElement.html(CONSTANTS.PHRASES[phrasesIndex]);
+    }, 5000);
 
 });
