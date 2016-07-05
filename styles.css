@@ -21,13 +21,12 @@ h3 {
 
 video {
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
-    transform: translateX(-50%) translateY(-50%);
     background: url('images/IMG_1205.jpg') no-repeat;
     background-size: cover;
     transition: 1s opacity;
@@ -67,6 +66,7 @@ button:focus {
     text-align: center;
     position: fixed;
     padding: 2em;
+    top: 0;
     right: 0;
     left: 0;
 }
