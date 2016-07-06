@@ -3,6 +3,16 @@ body {
     font-family: "source-sans-pro", sans-serif;
 }
 
+a, a:active, a:visited {
+    color: #444;
+    text-decoration: none;
+    border-bottom: 1px #444 dashed;
+}
+
+a:hover {
+    border-bottom: 1px #444 solid;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin: 0em;
     font-family: "adelle", serif;
