@@ -29,6 +29,11 @@ $(document).ready(function () {
         icon.toggleClass('fa-play');
     };
 
+    var changeFooterText = function () {
+        var phrasesIndex = Math.floor(Math.random() * CONSTANTS.PHRASES.length);
+        footerElement.html(CONSTANTS.PHRASES[phrasesIndex]);
+    };
+
     videoButton.on('click', function () {
         toggleVideoStatus();
     });
@@ -39,9 +44,9 @@ $(document).ready(function () {
         }
     });
 
+    changeFooterText();
     window.setInterval(function () {
-        var phrasesIndex = Math.floor(Math.random() * CONSTANTS.PHRASES.length);
-        footerElement.html(CONSTANTS.PHRASES[phrasesIndex]);
+        changeFooterText();
     }, 5000);
 
 });

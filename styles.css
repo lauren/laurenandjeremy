@@ -44,7 +44,6 @@ video {
     height: auto;
     background: url('images/IMG_1205.jpg') no-repeat;
     background-size: cover;
-    transition: 1s opacity;
     z-index: -1;
 }
 
@@ -88,7 +87,7 @@ button:focus {
 
 .footer {
     color: #fff;
-    opacity: .9;
+    opacity: 0.9;
     text-align: right;
     position: fixed;
     padding: 2em;
