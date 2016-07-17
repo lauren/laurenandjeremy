@@ -17,7 +17,10 @@ $(document).ready(function () {
     var videoButton = $('[data-action="toggle-video"]'),
         icon = videoButton.find('i'),
         videoElement = $('[data-ui="video"]')[0],
-        footerElement = $('[data-ui="footer-text"');
+        footerElement = $('[data-ui="footer-text"'),
+        navElement = $('[data-ui="nav"]'),
+        topOfNav = navElement[0].offsetTop,
+        windowElement = $(window);
 
     var toggleVideoStatus = function () {
         if (videoElement.paused) {
@@ -34,14 +37,32 @@ $(document).ready(function () {
         footerElement.html(CONSTANTS.PHRASES[phrasesIndex]);
     };
 
+    var resetNavClass = function () {
+        if (windowElement.scrollTop() >= topOfNav) {
+            navElement.addClass('nav-stuck');
+        } else {
+            navElement.removeClass('nav-stuck');
+        }
+    };
+
     videoButton.on('click', function () {
         toggleVideoStatus();
     });
 
-    $(window).on('keypress', function (event) {
+    windowElement.on('keypress', function (event) {
         if (event.charCode === CONSTANTS.SPACE_KEY_CODE) {
             toggleVideoStatus();
         }
+    });
+
+    // reset nav top when the window changes size
+    windowElement.on('resize', function () {
+        topOfNav = navElement[0].offsetTop;
+        resetNavClass();
+    });
+
+    windowElement.on('scroll', function () {
+        resetNavClass();
     });
 
     changeFooterText();
