@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     var CONSTANTS = {
         SPACE_KEY_CODE: 32,
-        NAV_PADDING: 5,
+        NAV_PADDING: 10,
         PHRASES: [
             "convenience = MAX_INT",
             "romance = MAX_INT",

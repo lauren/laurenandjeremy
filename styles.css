@@ -18,30 +18,31 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0em;
     font-family: "adelle", serif;
     font-weight: 300;
+    clear: both;
 }
 
 h1 {
-    margin-top: 1.75em;
+    margin-top: 2em;
 }
 
 h1, h2 {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 h3 {
     font-family: "source-sans-pro", sans-serif;
-    font-size: 2.7em;
+    font-size: 2em;
     margin-bottom: 0.2em;
 }
 
 h4 {
     font-family: "source-sans-pro", sans-serif;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .small-text {
     display: block;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .hero-container {
@@ -95,12 +96,12 @@ button:focus {
 }
 
 .banner h1, .banner h2 {
-    font-size: 3.5em;
+    font-size: 2.5em;
 }
 
 .nav {
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 3em auto;
     padding: 1em;
     border-top: 1px solid #aaa;
     box-shadow: 0px 5px 25px #aaa;
@@ -118,7 +119,7 @@ button:focus {
 .nav-item {
     display: inline-block;
     font-family: "source-sans-pro", sans-serif;
-    font-size: 2.5em;
+    font-size: 1.5em;
     padding: 0em 1em 0em 1em;
 }
 
@@ -133,8 +134,16 @@ button:focus {
 
 .content {
     width: 75%;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 2em auto;
+}
+
+.column-wrapper {
+    clear: both;
+}
+
+iframe {
+    width: 100%;
 }
 
 .footer {
@@ -142,4 +151,23 @@ button:focus {
     text-align: right;
     padding: 1em;
     box-shadow: 0px -5px 25px #aaa;
+}
+
+@media (min-width: 1000px) {
+    .content-left {
+        float: left;
+        padding-right: 5%;
+        width: 45%;
+    }
+
+    .content-right {
+        float: right;
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hide-xs {
+        display: none;
+    }
 }
