@@ -1,7 +1,7 @@
 body {
     color: #444;
     font-family: "source-sans-pro", sans-serif;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 a, a:active, a:visited {
@@ -68,6 +68,29 @@ h4 {
     overflow: hidden;
 }
 
+.hero-2 {
+    height: 40em;
+    background: url('images/USC.jpg') no-repeat;
+    background-size: cover;
+}
+
+.hero-2 h3 {
+    color: #fff;
+    margin: 1em auto;
+    text-align: center;
+}
+
+.hero-2 a {
+    color: #fff;
+    border-bottom: 1px dashed #fff;
+}
+
+.hero-2 a:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+
 video {
     width: 100%;
     height: 100%;
@@ -108,7 +131,7 @@ video {
     background-color: #fff;
     opacity: .75;
     text-align: center;
-    height: 30em;
+    height: 100%;
 }
 
 .banner h2 {
@@ -156,7 +179,8 @@ video {
 .content {
     width: 75%;
     font-size: 1.5em;
-    margin: 2em auto;
+    margin: 2em auto 15em auto;
+    min-height: 15em;
 }
 
 .column-wrapper {
@@ -167,12 +191,29 @@ iframe {
     width: 100%;
 }
 
+img {
+    width: 100%;
+}
+
 .footer {
     color: #444;
-    text-align: right;
     padding: 1em;
-    box-shadow: 0px -5px 25px #aaa;
+    box-shadow: 0px -15px 15px #ccc;
     clear: both;
+    margin-bottom: 1em;
+    font-family: "source-sans-pro", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.left-footer {
+    float: left;
+    text-align: left;
+}
+
+.right-footer {
+    float: right;
+    text-align: right;
 }
 
 @media (min-width: 1000px) {
