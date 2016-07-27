@@ -1,35 +1,31 @@
+/* terracotta: #CE8767 */
+/* copper variant 1: #9E5726 */
+/* copper variant 2: #e29467; */
+/* gray: #dee3e9 */
+/* green: #1b6e68 */
+/* lighter-green: #529994 */
+
 body {
-    color: #444;
-    font-family: "source-sans-pro", sans-serif;
-    font-weight: 300;
+    color: #333;
+    background: #fff;
+    font-family: "Catamaran", sans-serif;
 }
 
 a, a:active, a:visited {
     color: #444;
     text-decoration: none;
-    border-bottom: 1px #444 dashed;
+    border-bottom: 1px #888 dashed;
+    display: inline-block;
+    line-height: 14px;
 }
 
 a:hover {
-    border-bottom: 1px #444 solid;
-}
-
-.button-link {
-    border: 1px #444 solid;
-    box-shadow: 5px 5px 10px #ccc;
-    margin: 1em 1em 0em 0em;
-    padding: 0.25em 0.5em;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-.button-link:hover {
-    border: 1px #444 solid;
+    border-bottom: 1px #888 solid;
 }
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0em;
-    font-family: "adelle", serif;
+    font-family: "Gilda Display", serif;
     font-weight: 300;
     clear: both;
 }
@@ -37,23 +33,35 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     margin-top: 2em;
     font-size: 2.5em;
+    font-weight: 700;
 }
 
 h2 {
-    font-size: 1.5em;
-    margin-top: 1em;
+    font-size: 2em;
+    margin-bottom: .2em;
+    font-weight: 700;
 }
 
 h3 {
-    font-family: "source-sans-pro", sans-serif;
+    font-family: "Gilda Display", serif;
+    font-weight: 700;
+    font-variant: small-caps;
     font-size: 1.5em;
-    margin-bottom: 0.2em;
-}
+/*    margin-top: 1em;
+*/}
 
 h4 {
-    font-family: "source-sans-pro", sans-serif;
-    font-size: 1em;
-    font-weight: 400;
+    font-family: "Catamaran", sans-serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-top: 1em;
+}
+
+h5 {
+    font-variant: small-caps;
+    font-weight: 700;
+    font-size: 17px;
+    margin-top: 1em;
 }
 
 .small-text {
@@ -70,7 +78,7 @@ h4 {
 
 .hero-2 {
     height: 40em;
-    background: url('images/USC.jpg') no-repeat;
+    background: url('images/USC-2.jpg') no-repeat;
     background-size: cover;
 }
 
@@ -135,21 +143,29 @@ video {
 }
 
 .banner h2 {
-    font-size: 2.5em;
+    font-size: 2.25em;
     margin-top: 0em;
 }
 
 .banner h3 {
-    font-size: 2em;
+    font-size: 1.7em;
+}
+
+.banner h4 {
+    margin-top: 0;
+}
+
+li {
+    margin-bottom: .4em;
 }
 
 .nav {
     text-align: center;
-    margin: 0 auto 3em auto;
-    padding: 1em;
-    border-top: 1px solid #aaa;
-    box-shadow: 0px 5px 25px #aaa;
+    margin: 0 auto;
+    padding: .5em;
     background: #fff;
+    opacity: .96;
+    border-bottom: 2px solid #ce8767;
 }
 
 .nav-stuck {
@@ -162,9 +178,9 @@ video {
 
 .nav-item {
     display: inline-block;
-    font-family: "source-sans-pro", sans-serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 0em 1em 0em 1em;
+    margin-bottom: 0;    
 }
 
 .nav-item a {
@@ -177,8 +193,7 @@ video {
 }
 
 .content {
-    width: 75%;
-    font-size: 1.5em;
+    font-size: 17px;
     margin: 2em auto 15em auto;
     min-height: 15em;
 }
@@ -195,15 +210,21 @@ img {
     width: 100%;
 }
 
+
+hr {
+    border: 0;
+    margin: 2em auto;
+    height: 1px;
+    width: 80%;
+    background-image: linear-gradient(to right, rgba(27, 110, 104, 0), rgba(27, 110, 104, 0.45), rgba(27, 110, 104, 0));
+}
+
 .footer {
     color: #444;
-    padding: 1em;
-    box-shadow: 0px -15px 15px #ccc;
+    min-height: 1em;
+    padding: 1em 1em 1.5em 1em;
     clear: both;
-    margin-bottom: 1em;
-    font-family: "source-sans-pro", sans-serif;
     font-size: 1em;
-    font-weight: 400;
 }
 
 .left-footer {
@@ -215,6 +236,130 @@ img {
     float: right;
     text-align: right;
 }
+
+section {
+    box-sizing: border-box;
+    width: 100%;
+    clear: both;
+    float: left;
+    padding: 4em 8em;
+}
+
+section p {
+    margin-top: 0;
+}
+
+strong {
+    font-weight: 700;
+}
+
+blockquote {
+  background: #000;
+  opacity: .9;
+  border-left: 10px solid #333;
+  margin: 1.5em .5em 1.5em 0;
+  padding: 0.5em;
+}
+
+blockquote:before {
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+pre {
+    font-size: .9em;
+}
+
+.round-pic {
+    width: 300px;
+    margin: 2em 0 2em 6em;
+    float: right;
+    border-radius: 100%;
+}
+
+a.btn {
+    display: inline-block;
+    margin: 1em 0 2em 0;
+    border-radius: 3px;
+    color: #1b6e68;
+    border: 2px solid #1b6e68;
+    background: none;
+    font-weight: 700;
+    line-height: 1.4;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    white-space: nowrap;
+    background: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+    -webkit-transition: background 0.1s ease-out,border-color 0.1s ease-out,color 0.05s ease-out;
+    -moz-transition: background 0.1s ease-out,border-color 0.1s ease-out,color 0.05s ease-out;
+    -o-transition: background 0.1s ease-out,border-color 0.1s ease-out,color 0.05s ease-out;
+    -ms-transition: background 0.1s ease-out,border-color 0.1s ease-out,color 0.05s ease-out;
+    transition: background 0.1s ease-out,border-color 0.1s ease-out,color 0.05s ease-out;
+}
+
+a.btn:hover,
+a.btn:focus {
+    background-color: #1b6e68;
+    color: #fff;
+}
+
+a.btn i {
+    color: #1b6e68;
+}
+
+a.btn:hover i,
+a.btn:focus i {
+    color: #fff;
+}
+
+
+/* utility classes */
+.gilda {
+    font-family: 'Gilda Display', serif;
+}
+
+.endash:before,
+.endash:after {
+     content: "\2014";
+}
+
+
+.bg-green {
+    color: #fff;
+    background: #1b6e68;
+}
+
+.bg-lighter-green {
+    color: #fff;
+    background: #529994;
+}
+
+.bg-copper {
+    background: #ce8767;
+    color: #fff;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
 
 @media (min-width: 1000px) {
     .content-left {
@@ -251,7 +396,15 @@ img {
         font-size: 1em;
     }
 
-    .content {
+    section {
+        padding: 2em;
+    }
+
+    .round-pic {
+        margin: 2em auto;
+        padding: 0;
         width: 90%;
+        float: none;
+        display: block;
     }
 }
