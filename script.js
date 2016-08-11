@@ -119,12 +119,6 @@ $(document).ready(function () {
         }
     });
 
-    // reset nav top when the window changes size
-    windowElement.on('resize', function () {
-        topOfNav = navElement[0].offsetTop;
-        resetNavClass();
-    });
-
     windowElement.on('scroll', function () {
         resetNavClass();
     });
@@ -149,6 +143,6 @@ $(document).ready(function () {
         updateCountdown();
     }, 1);
 
-    console.log("Yes, I really did the month math.");
+    console.log("Yes, Lauren really did the month math.");
 
 });
