@@ -170,6 +170,7 @@ li {
     background: #fff;
     opacity: .96;
     border-bottom: 2px solid #ce8767;
+    border-image: url('images/copper-texture.jpg') 2 2 stretch;
 }
 
 .nav-stuck {
@@ -184,7 +185,7 @@ li {
     display: inline-block;
     font-size: 1.2em;
     padding: 0em 1em 0em 1em;
-    margin-bottom: 0;    
+    margin-bottom: 0;
 }
 
 .nav-item a {
@@ -345,7 +346,8 @@ a.btn:focus i {
 }
 
 .bg-copper {
-    background: #ce8767;
+    background: url('images/copper-texture.jpg') no-repeat;
+    background-size: cover;
     color: #fff;
 }
 
