@@ -334,19 +334,18 @@ a.btn:focus i {
      content: "\2014";
 }
 
-
-.bg-green {
-    color: #fff;
-    background: #1b6e68;
-}
-
-.bg-lighter-green {
-    color: #fff;
-    background: #529994;
-}
-
 .bg-copper {
     background: url('images/copper-texture.jpg') no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.bg-copper a {
+    color: #fff;
+}
+
+.bg-fern {
+    background: url('images/fern.jpg') no-repeat;
     background-size: cover;
     color: #fff;
 }
