@@ -454,4 +454,8 @@ a.btn:focus i {
         float: none;
         display: block;
     }
+
+    .right-footer {
+        clear: both;
+    }
 }
