@@ -75,24 +75,20 @@ h5 {
     overflow: hidden;
 }
 
-.hero-2 {
-    height: 40em;
+.schedule {
+    color: #fff;
+    text-shadow: 1px 2px 2px #333;
+    background-color: #000;
     background: url('images/USC.jpg') no-repeat;
     background-size: cover;
 }
 
-.hero-2 h3 {
-    color: #fff;
-    margin: 1em auto;
-    text-align: center;
-}
-
-.hero-2 a {
+.schedule a {
     color: #fff;
     border-bottom: 1px dashed #fff;
 }
 
-.hero-2 a:hover {
+.schedule a:hover {
     color: #fff;
     border-bottom: 1px solid #fff;
 }
