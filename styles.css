@@ -145,7 +145,7 @@ video {
     color: #fff;
     text-shadow: 1px 1px 2px #333;
     text-align: center;
-    margin-top: 8%;
+    margin-top: 6.5em;
     width: 100%;
 }
 
@@ -400,9 +400,6 @@ a.btn:focus i {
     .show-s {
         display: block;
     }
-}
-
-@media (max-width: 1000px) {
 
     section {
         padding: 2em;
@@ -414,6 +411,10 @@ a.btn:focus i {
 
     video {
         top: 0;
+    }
+
+    .banner {
+        margin-top: 4.5em;
     }
 }
 
@@ -436,7 +437,7 @@ a.btn:focus i {
     }
 
     .banner {
-        margin-top: 10%;
+        margin-top: 2em;
     }
 
     .banner h1, .banner h2 {
