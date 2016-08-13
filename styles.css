@@ -293,8 +293,9 @@ a.btn {
     display: inline-block;
     margin: 1em 0 2em 0;
     border-radius: 3px;
-    color: #1b6e68;
+    color: #9E5726;
     border: 2px solid #1b6e68;
+    border-image: url('images/copper-texture.jpg') 2 2 stretch;
     background: none;
     font-weight: 700;
     line-height: 1.4;
@@ -316,11 +317,13 @@ a.btn {
 a.btn:hover,
 a.btn:focus {
     background-color: #1b6e68;
+    background: url('images/copper-texture.jpg');
+    background-size: cover;
     color: #fff;
 }
 
 a.btn i {
-    color: #1b6e68;
+    color: #9E5726;
 }
 
 a.btn:hover i,
