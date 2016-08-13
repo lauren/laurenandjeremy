@@ -16,16 +16,16 @@ $(document).ready(function () {
         // January is month 0, so September is 8
         WEDDING_DATE: new Date(2017, 8, 9),
         MONTH_DAYS: {
-            0: 31, // Jan
-            1: 28, // Feb
-            2: 31, // March
-            3: 30, // April
-            4: 31, // May
-            5: 30, // June
-            6: 31, // July
-            7: 31, // August
-            8: 30, // September
-            9: 31, // October
+            0:  31, // Jan
+            1:  28, // Feb
+            2:  31, // March
+            3:  30, // April
+            4:  31, // May
+            5:  30, // June
+            6:  31, // July
+            7:  31, // August
+            8:  30, // September
+            9:  31, // October
             10: 30, // November
             11: 31 // December
         }
@@ -111,12 +111,6 @@ $(document).ready(function () {
 
     videoButton.on('click', function () {
         toggleVideoStatus();
-    });
-
-    windowElement.on('keypress', function (event) {
-        if (event.charCode === CONSTANTS.SPACE_KEY_CODE) {
-            toggleVideoStatus();
-        }
     });
 
     windowElement.on('scroll', function () {
