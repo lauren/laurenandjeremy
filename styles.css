@@ -33,12 +33,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 1.6em;
     margin-bottom: .2em;
     font-weight: 700;
 }
@@ -52,7 +52,7 @@ h3 {
 
 h4 {
     font-family: "Catamaran", sans-serif;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 700;
     margin-top: 1em;
 }
@@ -66,7 +66,7 @@ h5 {
 
 .small-text {
     display: block;
-    font-size: 1em;
+    font-size: .8em;
 }
 
 .hero-container {
@@ -142,7 +142,7 @@ video {
     color: #fff;
     text-shadow: 1px 1px 2px #333;
     text-align: center;
-    margin-top: 6.5em;
+    margin-top: 6em;
     width: 100%;
 }
 
@@ -403,7 +403,7 @@ a.btn:focus i {
     }
 
     .hero-container {
-        max-height: 360px;
+        max-height: 344px;
     }
 
     video {
@@ -411,7 +411,7 @@ a.btn:focus i {
     }
 
     .banner {
-        margin-top: 4.5em;
+        margin-top: 4em;
     }
 }
 
@@ -422,11 +422,11 @@ a.btn:focus i {
     }
 
     h2, h3 {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     .hero-container {
-        max-height: 175px;
+        max-height: 200px;
     }
 
     .banner-wrapper {
