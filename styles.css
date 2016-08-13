@@ -18,7 +18,7 @@ a, a:active, a:visited {
     text-decoration: none;
     border-bottom: 1px #888 dashed;
     display: inline-block;
-    line-height: 14px;
+    line-height: .9em;
 }
 
 a:hover {
@@ -256,6 +256,7 @@ section {
 
 section p {
     margin-top: 0;
+    line-height: 1.4em;
 }
 
 strong {
