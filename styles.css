@@ -180,7 +180,6 @@ li {
     background: #fff;
     opacity: .96;
     border-bottom: 2px solid #ce8767;
-    border-image: url('images/copper-texture.jpg') 2 2 stretch;
 }
 
 .nav-stuck {

@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
     var CONSTANTS = {
-        SPACE_KEY_CODE: 32,
         NAV_PADDING: 10,
         PHRASES: [
             "convenience = MAX_INT",
@@ -13,7 +12,7 @@ $(document).ready(function () {
             "it makes total sense",
             "it makes no sense"
         ],
-        // January is month 0, so September is 8
+        // January is month 0, so September is 8. SIGH.
         WEDDING_DATE: new Date(2017, 8, 9),
         MONTH_DAYS: {
             0:  31, // Jan
@@ -31,14 +30,15 @@ $(document).ready(function () {
         }
     };
 
+    // wedding is at 4pm, 1600 hours
     CONSTANTS.WEDDING_DATE.setHours(16);
 
     var videoButton = $('[data-action="toggle-video"]'),
         icon = videoButton.find('i'),
         videoElement = $('[data-ui="video"]')[0],
-        footerElement = $('[data-ui="footer-text"'),
-        countDownElement = $('[data-ui="countdown'),
-        navLinks = $('[data-ui="nav-item'),
+        footerElement = $('[data-ui="footer-text"]'),
+        countDownElement = $('[data-ui="countdown"]'),
+        navLinks = $('[data-ui="nav-item"]'),
         navElement = $('[data-ui="nav"]'),
         topOfNav = navElement[0].offsetTop,
         navHeight = navElement[0].offsetHeight,
@@ -62,7 +62,6 @@ $(document).ready(function () {
     var updateCountdown = function () {
         var now = new Date(),
             countdownText = '',
-            millisecondsTill = 1000 - now.getMilliseconds(),
             secondsTill = 60 - now.getSeconds(),
             minutesTill = 60 - now.getMinutes(),
             currentHourRoundedUp = now.getHours() + 1,
@@ -92,11 +91,9 @@ $(document).ready(function () {
         countdownText += hoursTill;
         countdownText += hoursTill === 1 ? " hours, " : " hours, ";
         countdownText += minutesTill;
-        countdownText += minutesTill === 1 ? " minute, " : " minutes, "
+        countdownText += minutesTill === 1 ? " minute, " : " minutes, ";
         countdownText += secondsTill;
-        countdownText += secondsTill === 1 ? " second, " : " seconds, ";
-        countdownText += millisecondsTill;
-        countdownText += millisecondsTill === 1 ? " millisecond left!" : " milliseconds left!";
+        countdownText += secondsTill === 1 ? " second" : " seconds";
 
         countDownElement.html(countdownText);
     };
@@ -134,8 +131,9 @@ $(document).ready(function () {
 
     updateCountdown();
     window.setInterval(function () {
+        changeFooterText();
         updateCountdown();
-    }, 1);
+    }, 1000);
 
     console.log("Yes, Lauren really did the month math.");
 
