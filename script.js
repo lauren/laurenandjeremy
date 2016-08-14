@@ -131,7 +131,6 @@ $(document).ready(function () {
 
     updateCountdown();
     window.setInterval(function () {
-        changeFooterText();
         updateCountdown();
     }, 1000);
 
