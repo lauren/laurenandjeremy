@@ -25,6 +25,12 @@ a:hover {
     border-bottom: 1px #888 solid;
 }
 
+a.img-link, a.img-link:active, a.img-link:visited, a.img-link:hover {
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+
 h1, h2, h3, h4, h5, h6 {
     margin: 0em;
     font-family: "Gilda Display", serif;
