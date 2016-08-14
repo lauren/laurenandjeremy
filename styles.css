@@ -282,11 +282,12 @@ strong {
 }
 
 blockquote {
-  background: #000;
-  opacity: .9;
+  display: inline-block;
+  clear: both;
+  background: rgba(5, 5, 5, .80);
   border-left: 10px solid #333;
   margin: 1.5em .5em 1.5em 0;
-  padding: 0.5em;
+  padding: 0.5em 3em 0.5em 0.5em;
 }
 
 blockquote:before {
