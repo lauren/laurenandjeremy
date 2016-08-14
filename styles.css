@@ -491,4 +491,8 @@ a.btn:focus i {
     .right-footer {
         clear: both;
     }
+
+    .nav-item {
+        padding: 0em 0.2em 0em 0em;
+    }
 }
