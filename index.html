@@ -18,7 +18,8 @@
 <body>
 
     <div class="hero-container">
-        <video poster=""
+        <video class="hide-s"
+               poster="images"
                data-ui="video"
                muted autoplay loop>
             <!-- <source src="video/IMG_1205.webm" type="video/webm"> -->
@@ -27,6 +28,10 @@
         </video>
 
         <div class="banner-wrapper">
+
+            <div class="swinging-gif hide-l"></div>
+
+
             <div class="banner">
                 <!-- nbsp between first and last so they don't wrap
                     at smaller screen sizes -->
@@ -39,7 +44,7 @@
             </div>
         </div>
 
-        <button class="pause-button" data-action="toggle-video">
+        <button class="pause-button hide-s" data-action="toggle-video">
             <i class="fa fa-pause"></i>
         </button>
 

@@ -143,8 +143,21 @@ video {
     background: rgba(0, 0, 0, .25);
 }
 
+.swinging-gif {
+    background: url('images/hero-swinging.gif') no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
 
 .banner {
+    position: relative;
+    z-index: 2;
     color: #fff;
     text-shadow: 1px 1px 2px #333;
     text-align: center;
@@ -377,6 +390,10 @@ a.btn:focus i {
 .clearfix { display: block; }
 /* close commented backslash hack */
 
+.hide-l {
+    display: none;
+}
+
 
 
 @media (min-width: 1000px) {
@@ -395,6 +412,10 @@ a.btn:focus i {
         display: none;
     }
 
+    .show-l {
+        display: block;
+    }
+
 }
 
 @media (max-width: 1000px) {
@@ -403,7 +424,8 @@ a.btn:focus i {
         display: none;
     }
 
-    .show-s {
+    .show-s,
+    .hide-l {
         display: block;
     }
 
@@ -412,7 +434,7 @@ a.btn:focus i {
     }
 
     .hero-container {
-        max-height: 344px;
+        height: 400px;
     }
 
     video {
@@ -421,6 +443,10 @@ a.btn:focus i {
 
     .banner {
         margin-top: 4em;
+    }
+
+    .schedule {
+        background-image: url('images/USC-mobile.jpg');
     }
 }
 
@@ -435,7 +461,7 @@ a.btn:focus i {
     }
 
     .hero-container {
-        max-height: 200px;
+        height: 215px;
     }
 
     .banner-wrapper {
