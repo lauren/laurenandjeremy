@@ -10,7 +10,8 @@ $(document).ready(function () {
             "that's so convenient",
             "the most wedding",
             "it makes total sense",
-            "it makes no sense"
+            "it makes no sense",
+            "BYO barf bag"
         ],
         // January is month 0, so September is 8. SIGH.
         WEDDING_DATE: new Date(2017, 8, 9),
