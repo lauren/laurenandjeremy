@@ -372,10 +372,17 @@ a.btn:focus i {
     background: url('images/copper-texture.jpg') no-repeat;
     background-size: cover;
     color: #fff;
+    text-shadow: 1px 2px 2px #333;
 }
 
-.bg-copper a {
+.bg-copper a, .bg-copper a:visited, .bg-copper a:active {
     color: #fff;
+    border-bottom: 1px dashed #fff;
+}
+
+.bg-copper a:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
 }
 
 .bg-fern {
