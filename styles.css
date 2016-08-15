@@ -321,7 +321,7 @@ a.btn {
     border-radius: 3px;
     color: #9E5726;
     border: 2px solid #1b6e68;
-    border-image: url('images/copper-texture.jpg') 2 2 stretch;
+    border-image: url('images/copper.jpg') 2 2 stretch;
     background: none;
     font-weight: 700;
     line-height: 1.4;
@@ -343,7 +343,7 @@ a.btn {
 a.btn:hover,
 a.btn:focus {
     background-color: #1b6e68;
-    background: url('images/copper-texture.jpg');
+    background: url('images/copper.jpg');
     background-size: cover;
     color: #fff;
 }
@@ -369,7 +369,7 @@ a.btn:focus i {
 }
 
 .bg-copper {
-    background: url('images/copper-texture.jpg') no-repeat;
+    background: url('images/copper.jpg') no-repeat;
     background-size: cover;
     color: #fff;
     text-shadow: 1px 2px 2px #333;
