@@ -33,7 +33,7 @@ a.img-link, a.img-link:active, a.img-link:visited, a.img-link:hover {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0em;
-    font-family: "Gilda Display", serif;
+    font-family: "Vidaloka", serif;
     font-weight: 300;
     clear: both;
 }
@@ -50,7 +50,7 @@ h2 {
 }
 
 h3 {
-    font-family: "Gilda Display", serif;
+    font-family: "Vidaloka", serif;
     font-weight: 700;
     font-variant: small-caps;
     font-size: 1.5em;
@@ -64,9 +64,8 @@ h4 {
 }
 
 h5 {
-    font-variant: small-caps;
     font-weight: 700;
-    font-size: 17px;
+    font-size: 1em;
     margin-top: 1em;
 }
 
@@ -361,8 +360,8 @@ a.btn:focus i {
 
 
 /* utility classes */
-.gilda {
-    font-family: 'Gilda Display', serif;
+.vidaloka {
+    font-family: 'Vidaloka', serif;
 }
 
 .endash:before,
