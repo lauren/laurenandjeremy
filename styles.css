@@ -58,7 +58,7 @@ h3 {
 
 h4 {
     font-family: "Catamaran", sans-serif;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: 700;
     margin-top: 1em;
 }
@@ -183,6 +183,7 @@ section.banner {
 }
 
 .banner h4 {
+    font-size: 1em;
     margin-top: 0;
 }
 
@@ -274,6 +275,10 @@ section {
     clear: both;
     float: left;
     padding: 4em 8em;
+}
+
+section h2 {
+    margin-bottom: 1em;
 }
 
 section p {
