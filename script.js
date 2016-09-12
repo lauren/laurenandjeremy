@@ -73,18 +73,13 @@ $(document).ready(function () {
             currentMonth = now.getMonth(),
             daysInCurrentMonth = CONSTANTS.MONTH_DAYS[currentMonth],
             daysTill = (currentDayRoundedUp > CONSTANTS.WEDDING_DATE.getDate())
-                ? ((daysInCurrentMonth + CONSTANTS.WEDDING_DATE.getDate()) - currentDayRoundedUp)
+                ? ((daysInCurrentMonth - currentDayRoundedUp) + CONSTANTS.WEDDING_DATE.getDate())
                 : CONSTANTS.WEDDING_DATE.getDate() - now.getDate(),
             currentMonthRoundedUp = currentMonth + 1,
             monthsTill = currentMonthRoundedUp > CONSTANTS.WEDDING_DATE.getMonth()
                 ? ((12 + CONSTANTS.WEDDING_DATE.getMonth()) - currentMonthRoundedUp)
-                : CONSTANTS.WEDDING_DATE.getMonth() - currentMonthRoundedUp,
-            yearsTill = CONSTANTS.WEDDING_DATE.getFullYear() > now.getFullYear()
-                ? CONSTANTS.WEDDING_DATE.getFullYear() - now.getFullYear()
-                : 0;
+                : CONSTANTS.WEDDING_DATE.getMonth() - currentMonthRoundedUp;
 
-        countdownText += yearsTill;
-        countdownText += yearsTill === 1 ? " year, " : " years, ";
         countdownText += monthsTill;
         countdownText += monthsTill === 1 ? " month, " : " months, ";
         countdownText += daysTill;
