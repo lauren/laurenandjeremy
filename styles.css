@@ -214,12 +214,8 @@ li {
 }
 
 .nav-item a {
-    border-bottom: 1px transparent;
+    border-bottom: none;
     cursor: pointer;
-}
-
-.nav-item a:hover {
-    border-bottom: 1px #aaa solid;
 }
 
 .content {
