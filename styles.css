@@ -127,14 +127,21 @@ video {
     outline: none;
 }
 
-.fa {
-    color: #fff;
+.icon-wrapper {
+    display: inline-block;
+    fill: currentColor;
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
 }
 
-.fa.fa-calendar-plus-o {
-    color: #333;
+.icon-wrapper svg {
+    display: block;
 }
 
+.fill-white {
+    fill: #fff;
+}
 
 .banner-wrapper {
     position: absolute;
@@ -394,6 +401,10 @@ a.btn:focus i {
     content: " ";
     clear: both;
     height: 0;
+}
+
+.display-none {
+    display: none !important;
 }
 
 /* start commented backslash hack \*/

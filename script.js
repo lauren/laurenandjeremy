@@ -35,7 +35,8 @@ $(document).ready(function () {
     CONSTANTS.WEDDING_DATE.setHours(16);
 
     var videoButton = $('[data-action="toggle-video"]'),
-        icon = videoButton.find('i'),
+        playButton = videoButton.find('.play'),
+        pauseButton = videoButton.find('.pause'),
         videoElement = $('[data-ui="video"]')[0],
         footerElement = $('[data-ui="footer-text"]'),
         countDownElement = $('[data-ui="countdown"]'),
@@ -51,8 +52,8 @@ $(document).ready(function () {
         } else {
             videoElement.pause();
         }
-        icon.toggleClass('fa-pause');
-        icon.toggleClass('fa-play');
+        pauseButton.toggleClass('display-none');
+        playButton.toggleClass('display-none');
     };
 
     var changeFooterText = function () {
