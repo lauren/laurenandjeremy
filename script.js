@@ -34,27 +34,13 @@ $(document).ready(function () {
     // wedding is at 4pm, 1600 hours
     CONSTANTS.WEDDING_DATE.setHours(16);
 
-    var videoButton = $('[data-action="toggle-video"]'),
-        playButton = videoButton.find('.play'),
-        pauseButton = videoButton.find('.pause'),
-        videoElement = $('[data-ui="video"]')[0],
-        footerElement = $('[data-ui="footer-text"]'),
+    var footerElement = $('[data-ui="footer-text"]'),
         countDownElement = $('[data-ui="countdown"]'),
         navLinks = $('[data-ui="nav-item"]'),
         navElement = $('[data-ui="nav"]'),
         topOfNav = navElement[0].offsetTop,
         navHeight = navElement[0].offsetHeight,
         windowElement = $(window);
-
-    var toggleVideoStatus = function () {
-        if (videoElement.paused) {
-            videoElement.play();
-        } else {
-            videoElement.pause();
-        }
-        pauseButton.toggleClass('display-none');
-        playButton.toggleClass('display-none');
-    };
 
     var changeFooterText = function () {
         var phrasesIndex = Math.floor(Math.random() * CONSTANTS.PHRASES.length);
@@ -102,10 +88,6 @@ $(document).ready(function () {
             navElement.removeClass('nav-stuck');
         }
     };
-
-    videoButton.on('click', function () {
-        toggleVideoStatus();
-    });
 
     windowElement.on('scroll', function () {
         resetNavClass();
