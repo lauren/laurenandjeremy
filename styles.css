@@ -408,11 +408,11 @@ a.btn:focus i {
     }
 
     .hero-container {
-        height: 400px;
+        height: 340px;
     }
 
     .banner {
-        margin-top: 4em;
+        margin-top: 3em;
     }
 
     .schedule {
@@ -425,6 +425,10 @@ a.btn:focus i {
         background-image: url('images/hero-bg-mobile.jpg')
     }
 
+    .banner {
+        margin: 4em 2em 2em 2em;
+    }
+
     .hide-xs {
         display: none;
     }
@@ -434,7 +438,7 @@ a.btn:focus i {
     }
 
     .hero-container {
-        height: 215px;
+        height: 190px;
     }
 
     .banner {
