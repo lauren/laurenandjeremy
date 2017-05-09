@@ -65,7 +65,7 @@ $(document).ready(function () {
             currentMonthRoundedUp = currentMonth + 1,
             monthsTill = currentMonthRoundedUp > CONSTANTS.WEDDING_DATE.getMonth()
                 ? ((12 + CONSTANTS.WEDDING_DATE.getMonth()) - currentMonthRoundedUp)
-                : CONSTANTS.WEDDING_DATE.getMonth() - currentMonthRoundedUp;
+                : CONSTANTS.WEDDING_DATE.getMonth() - currentMonth;
 
         countdownText += monthsTill;
         countdownText += monthsTill === 1 ? " month, " : " months, ";
