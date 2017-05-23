@@ -74,9 +74,12 @@ h5 {
 }
 
 .hero-container {
+    display: flex;
+    text-align: center;
     background: url('images/hero-bg.jpg') no-repeat;
     background-size: cover;
     width: 100%;
+    min-height: 200px;
     max-height: 415px;
     overflow: hidden;
 }
@@ -116,13 +119,12 @@ h5 {
 }
 
 .banner {
-    color: #fff;
-    text-shadow: 0px 1px 3px #222;
-    margin: 6em 0 6em 4em;
-}
-
-section.banner {
-    text-align: left;
+    display: inline-block;
+    align-self: flex-start;
+    margin: 2em 0 2em 4em;
+    padding: 2em;
+    background: rgba(255, 255, 255, .6);
+    color: #000;
 }
 
 .banner h2 {
@@ -393,6 +395,9 @@ a.btn:focus i {
 }
 
 @media (max-width: 1000px) {
+    .banner {
+        margin: 1em;
+    }
 
     .hide-s {
         display: none;
@@ -407,14 +412,6 @@ a.btn:focus i {
         padding: 2em;
     }
 
-    .hero-container {
-        height: 340px;
-    }
-
-    .banner {
-        margin-top: 3em;
-    }
-
     .schedule {
         background-image: url('images/USC-mobile.jpg');
     }
@@ -422,11 +419,8 @@ a.btn:focus i {
 
 @media (max-width: 600px) {
     .hero-container {
-        background-image: url('images/hero-bg-mobile.jpg')
-    }
-
-    .banner {
-        margin: 2em;
+        background-image: url('images/hero-bg-mobile.jpg');
+        background-position: bottom;
     }
 
     .hide-xs {
@@ -440,10 +434,6 @@ a.btn:focus i {
     .banner h4 {
         font-size: .9em;
         font-weight: 400;
-    }
-
-    .hero-container {
-        height: 190px;
     }
 
     .banner h1, .banner h2 {
