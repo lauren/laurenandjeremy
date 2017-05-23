@@ -107,7 +107,7 @@
 
             <p>When you arrive at the University Settlement Camp, you'll go straight up a long gravel driveway, passing the Beacon Pool on your left and the theater <span class="hide-s">(pictured below this text) </span>on your right. Parking is available at the end of the driveway on your left.</p>
 
-            <div class="column-wrapper clearfix">
+            <div class="column-wrapper">
 
                 <div class="content-left">
 
@@ -352,7 +352,7 @@
 
             <div class="content-left">
 
-                <h4>Main Street</h4>
+                <h3>Main Street</h3>
 
                 <h5>Food &amp; Drink</h5>
                 <ul>
@@ -440,27 +440,27 @@
 
         <p>In January of the following year, our colleage <a href="http://johngoulah.com" target="_blank">John</a> announced a new project called <a href="https://github.com/etsy/mixer" target="_blank">Mixer</a> to facilitate serendipitous one-on-one meetings between Etsy employees who might not otherwise have a chance to meet. We both signed up and were paired up for a meeting. Mixer's intention is to facilitate <em>professional</em> connections, of course, but after our mixer we started chatting a lot more, and eventually we went on our first date, to <a href="http://brooklynheightswinebar.com/" target="_blank">Brooklyn Heights Wine Bar</a>.</p>
 
-        <span class="hide-xs">
-        <p>This is <a href="https://github.com/etsy/mixer/blob/master/match/match.go#L253" target="_blank">the exact code</a> that paired us up for our pre-first date:</p>
+        <span class="hide-xs clearfix">
+            <p>This is <a href="https://github.com/etsy/mixer/blob/master/match/match.go#L253" target="_blank">the exact code</a> that paired us up for our pre-first date:</p>
 
-        <blockquote>
-        <pre>
-func pickRandom(cur_person Person) (*Person, error) {
-    list := rand.Perm(len(avail_pool))
-    for i := range list {
-        var random Person = avail_pool[i]
-        if isValid(cur_person, random, true) {
-            avail_pool = append(avail_pool[:i], avail_pool[i+1:]...)
-            return &random, nil
+            <blockquote>
+            <pre>
+    func pickRandom(cur_person Person) (*Person, error) {
+        list := rand.Perm(len(avail_pool))
+        for i := range list {
+            var random Person = avail_pool[i]
+            if isValid(cur_person, random, true) {
+                avail_pool = append(avail_pool[:i], avail_pool[i+1:]...)
+                return &random, nil
+            }
         }
+
+        return nil, fmt.Errorf("couldn't find an available participant")
     }
+            </pre>
+            </blockquote>
 
-    return nil, fmt.Errorf("couldn't find an available participant")
-}
-        </pre>
-        </blockquote>
-
-        <p>We're lucky that <code>pickRandom</code> returned <code>random</code> instead of <code>nil</code>!</p>
+            <p>We're lucky that <code>pickRandom</code> returned <code>random</code> instead of <code>nil</code>!</p>
         </span>
     </section>
 
