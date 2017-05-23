@@ -143,13 +143,14 @@ li {
     text-align: center;
     margin: 0 auto;
     padding: .5em;
-    background: #fff;
-    opacity: .96;
-    border-bottom: 2px solid #ce8767;
+    background: transparent;
+    opacity: 0.9;
+/*    border-bottom: 2px solid ;*/
 }
 
 .nav-stuck {
     position: fixed;
+    background: #fff;
     top: 0;
     left: 0;
     right: 0;
@@ -164,11 +165,13 @@ li {
 }
 
 .nav-item a {
+    font-family: 'Vidaloka', serif;
     border-bottom: none;
     cursor: pointer;
 }
 
 .nav-item a:hover {
+    text-decoration: underline;
     color: currentColor;
     opacity: .7;
 }
@@ -236,6 +239,10 @@ strong {
     font-weight: 700;
 }
 
+.circle {
+    border-radius: 100%;
+}
+
 blockquote {
   display: inline-block;
   clear: both;
@@ -260,7 +267,6 @@ pre {
     width: 300px;
     margin: 2em 0 2em 6em;
     float: right;
-    border-radius: 100%;
 }
 
 a.btn {
@@ -430,6 +436,11 @@ a.btn:focus i {
 
     .right-footer {
         clear: both;
+    }
+
+    .nav {
+        opacity: 1;
+        border-bottom: 1px solid #222;
     }
 
     .nav-item {
