@@ -33,14 +33,18 @@ a.img-link, a.img-link:active, a.img-link:visited, a.img-link:hover {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0em;
-    font-family: "Vidaloka", serif;
     font-weight: 300;
     clear: both;
 }
 
 h1 {
+    font-family: "Vidaloka", serif;
     font-size: 2em;
     font-weight: 700;
+}
+
+.text-small {
+    font-size: 50% !important;
 }
 
 h2 {
@@ -119,7 +123,6 @@ h5 {
 }
 
 .banner {
-    display: inline-block;
     align-self: flex-start;
     margin: 2em 0 2em 4em;
     padding: 2em;
@@ -130,10 +133,6 @@ h5 {
 .banner h2 {
     font-size: 2.25em;
     margin-top: 0em;
-}
-
-.banner h3 {
-    font-size: 1.7em;
 }
 
 .banner h4 {
@@ -174,14 +173,21 @@ li {
     cursor: pointer;
 }
 
-.content {
-    font-size: 17px;
-    margin: 2em auto 15em auto;
-    min-height: 15em;
+.nav-item a:hover {
+    color: currentColor;
+    opacity: .7;
 }
 
 .column-wrapper {
-    clear: both;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1em;
+}
+
+.content-right,
+.content-left {
+    box-sizing: border-box;
+    width: 46%;
 }
 
 iframe {
@@ -207,11 +213,6 @@ hr {
     padding: 1em 1em 1.5em 1em;
     clear: both;
     font-size: 1em;
-}
-
-.left-footer {
-    float: left;
-    text-align: left;
 }
 
 .right-footer {
@@ -316,11 +317,6 @@ a.btn:focus i {
     font-family: 'Vidaloka', serif;
 }
 
-.endash:before,
-.endash:after {
-     content: "\2014";
-}
-
 .bg-copper {
     background: url('images/copper.jpg') no-repeat;
     background-size: cover;
@@ -362,10 +358,6 @@ a.btn:focus i {
 .clearfix { display: block; }
 /* close commented backslash hack */
 
-.hide-l {
-    display: none;
-}
-
 @media (min-width: 1250px) {
     .hero-container {
         background-image: url('images/hero-bg-wide.jpg')
@@ -374,14 +366,9 @@ a.btn:focus i {
 
 @media (min-width: 1000px) {
     .content-left {
-        float: left;
-        padding-right: 5%;
-        width: 45%;
     }
 
     .content-right {
-        float: right;
-        width: 50%;
     }
 
     .show-s {
@@ -403,8 +390,7 @@ a.btn:focus i {
         display: none;
     }
 
-    .show-s,
-    .hide-l {
+    .show-s {
         display: block;
     }
 
