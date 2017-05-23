@@ -1,28 +1,27 @@
 /* terracotta: #CE8767 */
 /* copper variant 1: #9E5726 */
-/* copper variant 2: #e29467; */
 /* gray: #dee3e9 */
 /* green: #1b6e68 */
 /* lighter-green: #529994 */
 
 body {
     margin: 0;
-    color: #333;
+    color: #222;
     background: #fff;
-    font-size: 18px;
-    font-family: "Catamaran", sans-serif;
+    font-size: 17px;
+    font-family: "Karla", sans-serif;
 }
 
 a, a:active, a:visited {
-    color: #444;
+    color: #222;
     text-decoration: none;
-    border-bottom: 1px #888 dashed;
+    border-bottom: 1px dotted #777;
     display: inline-block;
     line-height: .9em;
 }
 
 a:hover {
-    border-bottom: 1px #888 solid;
+    border-bottom: 1px solid #999;
 }
 
 a.img-link, a.img-link:active, a.img-link:visited, a.img-link:hover {
@@ -98,7 +97,7 @@ h5,
 
 .schedule a {
     color: #fff;
-    border-bottom: 1px dashed #fff;
+    border-bottom: 1px dotted #fff;
 }
 
 .schedule a:hover {
@@ -143,9 +142,6 @@ li {
     text-align: center;
     margin: 0 auto;
     padding: .5em;
-    background: transparent;
-    opacity: 0.9;
-/*    border-bottom: 2px solid ;*/
 }
 
 .nav-stuck {
@@ -231,7 +227,7 @@ section h2 {
 
 section p {
     margin-top: 0;
-    line-height: 1.3em;
+    line-height: 1.2em;
     max-width: 800px;
 }
 
