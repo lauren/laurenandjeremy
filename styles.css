@@ -42,18 +42,17 @@ h1 {
 }
 
 .text-small {
-    font-size: 50% !important;
+    font-size: 60% !important;
 }
 
 h2 {
     font-family: "Vidaloka", serif;
-    font-size: 1.6em;
-    margin-bottom: .2em;
+    font-size: 1.5em;
 }
 
 h3 {
     font-family: "Vidaloka", serif;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 h4 {
@@ -346,8 +345,20 @@ a.btn:focus i {
     height: 0;
 }
 
+.margin-top-1 {
+    margin-top: .5em;
+}
+
+.margin-bottom-1 {
+    margin-bottom: .5em;
+}
+
 .display-none {
     display: none !important;
+}
+
+.display-block {
+    display: block;
 }
 
 /* start commented backslash hack \*/
@@ -362,11 +373,6 @@ a.btn:focus i {
 }
 
 @media (min-width: 1000px) {
-    .content-left {
-    }
-
-    .content-right {
-    }
 
     .show-s {
         display: none;
@@ -380,6 +386,7 @@ a.btn:focus i {
 
 @media (max-width: 1000px) {
     .banner {
+        padding: 1em;
         margin: 1em;
     }
 
@@ -415,21 +422,12 @@ a.btn:focus i {
         background-position: bottom;
     }
 
+    .banner {
+        background: rgba(255, 255, 255, .9);
+    }
+
     .hide-xs {
         display: none;
-    }
-
-    h2, h3 {
-        font-size: 1.2em;
-    }
-
-    .banner h4 {
-        font-size: .9em;
-        font-weight: 400;
-    }
-
-    .banner h1, .banner h2 {
-        font-size: 1.2em;
     }
 
     .round-pic {
