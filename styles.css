@@ -16,7 +16,6 @@ a, a:active, a:visited {
     color: #222;
     text-decoration: none;
     border-bottom: 1px dotted #777;
-    /*display: inline-block;*/
 }
 
 a:hover {
@@ -55,10 +54,8 @@ h3 {
 }
 
 h4 {
-    font-family: "Catamaran", sans-serif;
+    font-family: "Karla", sans-serif;
     font-size: 1.3em;
-    font-weight: 700;
-    margin-top: 1em;
 }
 
 h5,
@@ -119,7 +116,7 @@ h5,
     align-self: flex-start;
     margin: 2em 0 2em 4em;
     padding: 2em;
-    background: rgba(255, 255, 255, .6);
+    background: rgba(255, 255, 255, .7);
     color: #000;
 }
 
@@ -299,9 +296,6 @@ a.btn:focus i {
 
 
 /* utility classes */
-.vidaloka {
-    font-family: 'Vidaloka', serif;
-}
 
 .bg-copper {
     background: url('images/copper.jpg') no-repeat;
