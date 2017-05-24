@@ -147,6 +147,7 @@ li {
 .nav-stuck {
     position: fixed;
     background: #fff;
+    opacity: .95;
     top: 0;
     left: 0;
     right: 0;
@@ -400,6 +401,15 @@ a.btn:focus i {
 }
 
 @media (max-width: 600px) {
+    .column-wrapper {
+        flex-direction: column;
+    }
+
+    .content-right,
+    .content-left {
+        width: 100%;
+    }
+
     .hero-container {
         background-image: url('images/hero-bg-mobile.jpg');
         background-position: bottom;
