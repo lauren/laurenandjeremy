@@ -22,8 +22,8 @@
         <div class="banner">
             <!-- nbsp between first and last so they don't wrap
                 at smaller screen sizes -->
-            <h1>Lauren&nbsp;Sperber &amp; Jeremy&nbsp;Pharo
-                <br><span class="text-small">are getting married</span>
+            <h1 class="margin-bottom-1">Lauren&nbsp;Sperber &amp; Jeremy&nbsp;Pharo
+                <span class="text-small display-block">are getting married</span>
             </h1>
             <h4 class="hide-xs">University Settlement Camp
                 <br>Beacon,&nbsp;New York</h4>
@@ -34,10 +34,10 @@
     <ul class="nav" data-ui="nav">
         <li class="nav-item" data-nav-item="wedding">
             <a data-ui="nav-item" data-nav-item="wedding">
-                Wedding Details
+                <span class="hide-s">Wedding</span> Details
             </a>
         </li>
-        <li class="nav-item hide-s" data-nav-item="beacon">
+        <li class="nav-item" data-nav-item="beacon">
             <a data-ui="nav-item" data-nav-item="beacon">
                 Accommodations
             </a>
@@ -53,7 +53,7 @@
     </ul>
 
     <section>
-        <h2 data-header-item="wedding">Wedding Details</h2>
+        <h1 class="margin-bottom-1" data-header-item="wedding">Wedding Details</h1>
 
         <div class="column-wrapper">
 
@@ -101,7 +101,7 @@
 
     <section class="schedule">
 
-            <h2>Full wedding weekend schedule</h2>
+            <h1 class="margin-bottom-1">Full wedding weekend schedule</h1>
 
             <p>All events will take place at the University Settlement Camp at 724 Wolcott Avenue, Beacon, NY 12508</p>
 
@@ -142,7 +142,7 @@
 
     <section>
 
-        <h2 data-header-item="beacon">Accommodations</h2>
+        <h1 class="margin-bottom-1" data-header-item="beacon">Accommodations</h1>
 
         <p>We live in <a href="https://en.wikipedia.org/wiki/Beacon,_New_York">Beacon, New York</a>, a small city in the Hudson Valley, about 60 miles north of New  York City.</p>
 
@@ -429,9 +429,7 @@
     </section>
 
     <section class="bg-copper">
-        <h2 data-header-item="us">About us</h2>
-
-        <!-- <h3>How We Met</h3> -->
+        <h1 class="margin-bottom-1" data-header-item="us">About us</h1>
 
         <img src="images/engagement.jpg" class="circle round-pic" alt="a picture of Lauren and Jeremy" />
 
@@ -446,18 +444,44 @@
 
             <blockquote>
             <pre>
-    func pickRandom(cur_person Person) (*Person, error) {
-        list := rand.Perm(len(avail_pool))
-        for i := range list {
-            var random Person = avail_pool[i]
-            if isValid(cur_person, random, true) {
-                avail_pool = append(avail_pool[:i], avail_pool[i+1:]...)
-                return &random, nil
-            }
-        }
-
-        return nil, fmt.Errorf("couldn't find an available participant")
-    }
+            <table>
+                <tr>
+                <td id="LC254" class="blob-code blob-code-inner js-file-line"><span class="pl-k">func</span> <span class="pl-en">pickRandom</span>(<span class="pl-v">cur_person</span> <span class="pl-v">Person</span>) (*<span class="pl-v">Person</span>, <span class="pl-v">error</span>) {</td>
+                </tr>
+                <tr>
+                <td id="LC255" class="blob-code blob-code-inner js-file-line">  <span class="pl-smi">list</span> <span class="pl-k">:=</span> rand.<span class="pl-c1">Perm</span>(<span class="pl-c1">len</span>(avail_pool))</td>
+                </tr>
+                <tr>
+                <td id="LC256" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">for</span> <span class="pl-smi">i</span> <span class="pl-k">:=</span> <span class="pl-k">range</span> list {</td>
+                </tr>
+                <tr>
+                <td id="LC257" class="blob-code blob-code-inner js-file-line">      <span class="pl-k">var</span> <span class="pl-smi">random</span> Person = avail_pool[i]</td>
+                </tr>
+                <tr>
+                <td id="LC258" class="blob-code blob-code-inner js-file-line">      <span class="pl-k">if</span> <span class="pl-c1">isValid</span>(cur_person, random, <span class="pl-c1">true</span>) {</td>
+                </tr>
+                <tr>
+                <td id="LC259" class="blob-code blob-code-inner js-file-line">          avail_pool = <span class="pl-c1">append</span>(avail_pool[:i], avail_pool[i+<span class="pl-c1">1</span>:]...)</td>
+                </tr>
+                <tr>
+                <td id="LC260" class="blob-code blob-code-inner js-file-line">          <span class="pl-k">return</span> &amp;random, <span class="pl-c1">nil</span></td>
+                </tr>
+                <tr>
+                <td id="LC261" class="blob-code blob-code-inner js-file-line">      }</td>
+                </tr>
+                <tr>
+                <td id="LC262" class="blob-code blob-code-inner js-file-line">  }</td>
+                </tr>
+                <tr>
+                <td id="LC263" class="blob-code blob-code-inner js-file-line">
+                </td>
+                </tr>
+                <tr>
+                <td id="LC264" class="blob-code blob-code-inner js-file-line">  <span class="pl-k">return</span> <span class="pl-c1">nil</span>, fmt.<span class="pl-c1">Errorf</span>(<span class="pl-s"><span class="pl-pds">"</span>couldn't find an available participant<span class="pl-pds">"</span></span>)</td>
+                </tr>
+                <tr>
+                <td id="LC265" class="blob-code blob-code-inner js-file-line">}</td>
+                </tr>
             </pre>
             </blockquote>
 
