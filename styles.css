@@ -16,8 +16,7 @@ a, a:active, a:visited {
     color: #222;
     text-decoration: none;
     border-bottom: 1px dotted #777;
-    display: inline-block;
-    line-height: .9em;
+    /*display: inline-block;*/
 }
 
 a:hover {
@@ -116,10 +115,6 @@ h5,
     display: block;
 }
 
-.fill-white {
-    fill: #fff;
-}
-
 .banner {
     align-self: flex-start;
     margin: 2em 0 2em 4em;
@@ -128,13 +123,8 @@ h5,
     color: #000;
 }
 
-.banner h4 {
-    font-size: 1.15em;
-    margin-top: 0;
-}
-
 li {
-    margin-bottom: .4em;
+    margin-bottom: .75em;
 }
 
 .nav {
@@ -448,7 +438,7 @@ a.btn:focus i {
     }
 
     .nav-item {
-        font-size: 1em;
-        padding: 0em 0.6em 0em 0em;
+        font-size: 1.1em;
+        padding: .5em;
     }
 }
