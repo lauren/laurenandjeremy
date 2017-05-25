@@ -372,7 +372,7 @@ a.btn:focus i {
 @media (max-width: 1000px) {
     .banner {
         padding: 1em;
-        margin: 1em;
+        margin: 1em auto;
     }
 
     .hide-s {
