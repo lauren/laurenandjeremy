@@ -126,9 +126,11 @@ li {
 }
 
 .nav {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    padding: .5em;
+    padding: .75em;
 }
 
 .nav-stuck {
@@ -142,6 +144,7 @@ li {
 }
 
 .nav-item {
+    flex: 1;
     display: inline-block;
     font-size: 1.2em;
     margin: 0em 1em 0em 1em;
@@ -152,11 +155,10 @@ li {
     font-family: 'Vidaloka', serif;
     border-bottom: none;
     cursor: pointer;
+    border-bottom: 1px dotted #ddd;
 }
 
 .nav-item a:hover {
-    text-decoration: underline;
-    color: currentColor;
     opacity: .7;
 }
 
