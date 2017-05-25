@@ -408,7 +408,9 @@ a.btn:focus i {
     }
 
     .banner {
-        background: rgba(255, 255, 255, .9);
+        background: rgba(255, 255, 255, .65);
+        margin: 0 auto !important;
+        padding: 2em;
     }
 
     .hide-xs {
