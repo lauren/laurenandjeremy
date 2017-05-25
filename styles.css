@@ -144,11 +144,10 @@ li {
 }
 
 .nav-item {
-    flex: 1;
+    flex: 0 1 auto;
     display: inline-block;
     font-size: 1.2em;
     margin: 0em 1em 0em 1em;
-    margin-bottom: 0;
 }
 
 .nav-item a {
