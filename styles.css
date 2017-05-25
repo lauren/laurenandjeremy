@@ -436,7 +436,7 @@ a.btn:focus i {
     }
 
     .nav-item {
+        margin: 0 .25em;
         font-size: 1.1em;
-        padding: .5em;
     }
 }
