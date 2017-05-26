@@ -388,6 +388,10 @@ a.btn:focus i {
 }
 
 @media (max-width: 600px) {
+    h1 {
+        text-align: center;
+    }
+
     .column-wrapper {
         flex-direction: column;
     }
