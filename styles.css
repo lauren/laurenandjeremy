@@ -228,25 +228,15 @@ strong {
     border-radius: 100%;
 }
 
-blockquote {
-  display: inline-block;
-  clear: both;
-  background: rgba(5, 5, 5, .80);
-  border-left: 10px solid #333;
-  margin: 1.5em .5em 1.5em 0;
-  padding: 0.5em 3em 0.5em 0.5em;
-}
-
-blockquote:before {
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-
 pre {
+    display: block;
+    padding: .5em;
+    color: #222;
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: inset 0 2px 2px #999;
+    text-shadow: none;
     font-size: .9em;
-}
+}   
 
 .round-pic {
     width: 300px;
@@ -439,4 +429,50 @@ a.btn:focus i {
         margin: 0 .25em;
         font-size: 1.1em;
     }
+}
+
+
+/*!
+ * GitHub Light v0.3.0
+ * Copyright (c) 2012 - 2016 GitHub, Inc.
+ * Licensed under MIT (https://github.com/primer/github-syntax-theme-generator/blob/master/LICENSE)
+ */
+.pl-c {
+    color: #969896
+}
+
+.pl-c1,.pl-s .pl-v {
+    color: #0086b3
+}
+
+.pl-e,.pl-en {
+    color: #795da3
+}
+
+.pl-smi,.pl-s .pl-s1 {
+    color: #333
+}
+
+.pl-ent {
+    color: #63a35c
+}
+
+.pl-k {
+    color: #a71d5d
+}
+
+.pl-s,.pl-pds,.pl-s .pl-pse .pl-s1,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sre,.pl-sr .pl-sra {
+    color: #183691
+}
+
+.pl-v,.pl-smw {
+    color: #ed6a43
+}
+
+.blob-code {
+    position: relative;
+    padding-right: 2em;
+    padding-left: 2em;
+    line-height: 1.5em;
+    vertical-align: top;
 }
