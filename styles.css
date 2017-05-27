@@ -131,6 +131,7 @@ li {
     justify-content: center;
     margin: 0 auto;
     padding: .75em;
+    border-bottom: 1px solid #222;
 }
 
 .nav-stuck {
@@ -154,11 +155,11 @@ li {
     font-family: 'Vidaloka', serif;
     border-bottom: none;
     cursor: pointer;
-    border-bottom: 1px dotted #ddd;
 }
 
 .nav-item a:hover {
     opacity: .7;
+    border-bottom: 1px dotted rgb(198, 198, 198);
 }
 
 .column-wrapper {
@@ -446,7 +447,6 @@ a.btn:focus i {
 
     .nav {
         opacity: 1;
-        border-bottom: 1px solid #222;
     }
 
     .nav-item {
