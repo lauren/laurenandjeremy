@@ -321,6 +321,10 @@ a.btn:focus i {
     margin-top: .5em;
 }
 
+.margin-top-2 {
+    margin-top: 1em;
+}
+
 .margin-bottom-1 {
     margin-bottom: .5em;
 }
