@@ -15,24 +15,14 @@ $(document).ready(function () {
         ],
         // January is month 0, so September is 8. SIGH.
         WEDDING_DATE: new Date(2017, 8, 9),
-        MONTH_DAYS: {
-            0:  31, // Jan
-            1:  28, // Feb
-            2:  31, // March
-            3:  30, // April
-            4:  31, // May
-            5:  30, // June
-            6:  31, // July
-            7:  31, // August
-            8:  30, // September
-            9:  31, // October
-            10: 30, // November
-            11: 31 // December
-        }
+        WEDDING_END_DATE: new Date(2017, 8, 9)
     };
 
     // wedding is at 4pm, 1600 hours
     CONSTANTS.WEDDING_DATE.setHours(16);
+    // ends at 9:30pm, 2130
+    CONSTANTS.WEDDING_END_DATE.setHours(21);
+    CONSTANTS.WEDDING_END_DATE.setMinutes(30);
 
     var footerElement = $('[data-ui="footer-text"]'),
         countDownElement = $('[data-ui="countdown"]'),
@@ -40,7 +30,8 @@ $(document).ready(function () {
         navElement = $('[data-ui="nav"]'),
         topOfNav = navElement[0].offsetTop,
         navHeight = navElement[0].offsetHeight,
-        windowElement = $(window);
+        windowElement = $(window),
+        countdownInterval;
 
     var changeFooterText = function () {
         var phrasesIndex = Math.floor(Math.random() * CONSTANTS.PHRASES.length);
@@ -48,35 +39,41 @@ $(document).ready(function () {
     };
 
     var updateCountdown = function () {
-        var now = new Date(),
-            countdownText = '',
-            secondsTill = 60 - now.getSeconds(),
-            minutesTill = 60 - now.getMinutes(),
-            currentHourRoundedUp = now.getHours() + 1,
-            hoursTill = (currentHourRoundedUp > CONSTANTS.WEDDING_DATE.getHours())
-                ? ((24 + CONSTANTS.WEDDING_DATE.getHours()) - currentHourRoundedUp)
-                : CONSTANTS.WEDDING_DATE.getHours() - currentHourRoundedUp,
-            currentDayRoundedUp = now.getDate() + 1,
-            currentMonth = now.getMonth(),
-            daysInCurrentMonth = CONSTANTS.MONTH_DAYS[currentMonth],
-            daysTill = (currentDayRoundedUp > CONSTANTS.WEDDING_DATE.getDate())
-                ? ((daysInCurrentMonth - currentDayRoundedUp) + CONSTANTS.WEDDING_DATE.getDate())
-                : CONSTANTS.WEDDING_DATE.getDate() - now.getDate(),
-            currentMonthRoundedUp = currentMonth + 1,
-            monthsTill = (currentDayRoundedUp > CONSTANTS.WEDDING_DATE.getDate())
-                ? CONSTANTS.WEDDING_DATE.getMonth() - currentMonthRoundedUp
-                : CONSTANTS.WEDDING_DATE.getMonth() - currentMonth;
+        var now = (new Date()).getTime(),
+            weddingTimestamp = CONSTANTS.WEDDING_DATE.getTime(),
+            weddingEndTimestamp = CONSTANTS.WEDDING_END_DATE.getTime(),
+            millisecondsTillWedding = weddingTimestamp - now,
+            countdownText = "We're already married!",
+            secondsTillWedding,
+            minutesTillWedding,
+            hoursTillWedding,
+            daysTillWedding,
+            hoursLeft,
+            minutesLeft,
+            secondsLeft;
 
-        countdownText += monthsTill;
-        countdownText += monthsTill === 1 ? " month, " : " months, ";
-        countdownText += daysTill;
-        countdownText += daysTill === 1 ? " day, " : " days, ";
-        countdownText += hoursTill;
-        countdownText += hoursTill === 1 ? " hours, " : " hours, ";
-        countdownText += minutesTill;
-        countdownText += minutesTill === 1 ? " minute, " : " minutes, ";
-        countdownText += secondsTill;
-        countdownText += secondsTill === 1 ? " second" : " seconds";
+        if (millisecondsTillWedding > 0) {
+            secondsTillWedding = millisecondsTillWedding / 1000,
+            minutesTillWedding = secondsTillWedding / 60,
+            hoursTillWedding = minutesTillWedding / 60,
+            daysTillWedding = Math.floor(hoursTillWedding / 24),
+            hoursLeft = Math.floor(hoursTillWedding - (daysTillWedding * 24)),
+            minutesLeft = Math.floor(minutesTillWedding - (daysTillWedding * 24 * 60) - (hoursLeft * 60)),
+            secondsLeft = Math.floor(secondsTillWedding - (daysTillWedding * 24 * 60 * 60) - (hoursLeft * 60 * 60) - (minutesLeft * 60)),
+            countdownText = daysTillWedding;
+
+            countdownText += daysTillWedding === 1 ? " day, " : " days, ";
+            countdownText += hoursLeft;
+            countdownText += hoursLeft === 1 ? " hours, " : " hours, ";
+            countdownText += minutesLeft;
+            countdownText += minutesLeft === 1 ? " minute, " : " minutes, ";
+            countdownText += secondsLeft;
+            countdownText += secondsLeft === 1 ? " second" : " seconds";
+        }
+
+        if ((weddingTimestamp < now) && (weddingEndTimestamp > now)) {
+            countdownText = "IT'S HAPPENING!!!";
+        }
 
         countDownElement.html(countdownText);
     };
@@ -109,10 +106,11 @@ $(document).ready(function () {
     }, 5000);
 
     updateCountdown();
-    window.setInterval(function () {
+    var countdownInterval = window.setInterval(function () {
         updateCountdown();
+        if ((new Date()).getTime() > CONSTANTS.WEDDING_END_DATE.getTime()) {
+            clearInterval(countdownInterval);
+        }
     }, 1000);
-
-    console.log("Yes, Lauren really did the month math.");
 
 });
