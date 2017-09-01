@@ -213,6 +213,7 @@ section {
 
 section h2 {
     margin-bottom: 1em;
+    margin-top: 2em;
 }
 
 section p {
@@ -498,4 +499,8 @@ a.btn:focus i {
     padding-left: 2em;
     line-height: 1.5em;
     vertical-align: top;
+}
+
+.hilary-convo {
+    max-width: 640px;
 }
