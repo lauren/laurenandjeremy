@@ -276,16 +276,6 @@ a.btn:focus {
     color: #fff;
 }
 
-a.btn i {
-    color: #9E5726;
-}
-
-a.btn:hover i,
-a.btn:focus i {
-    color: #fff;
-}
-
-
 /* utility classes */
 
 .bg-copper {
@@ -458,9 +448,6 @@ a.btn:focus i {
  * Copyright (c) 2012 - 2016 GitHub, Inc.
  * Licensed under MIT (https://github.com/primer/github-syntax-theme-generator/blob/master/LICENSE)
  */
-.pl-c {
-    color: #969896
-}
 
 .pl-c1,.pl-s .pl-v {
     color: #0086b3
